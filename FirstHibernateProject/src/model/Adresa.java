@@ -13,8 +13,8 @@ public class Adresa {
 	public String getZemlja() {
 		return zemlja;
 	}
-	public void setZemlja(String zmelja) {
-		this.zemlja = zmelja;
+	public void setZemlja(String zemlja) {
+		this.zemlja = zemlja;
 	}
 	public String getGrad() {
 		return grad;

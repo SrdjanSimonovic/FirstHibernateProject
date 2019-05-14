@@ -6,20 +6,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "moja_tabela_marki")
 public class Marka {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_marke")
 	private int idMarke;
-	@Column(name = " naziv_marke")
 	private String nazivMarke;
 	@Embedded
 	private Adresa adresa;
+	@ManyToOne
+	private User user;
 	
 	public int getIdMarke() {
 		return idMarke;
@@ -38,6 +38,12 @@ public class Marka {
 	}
 	public void setAdresa(Adresa adresa) {
 		this.adresa = adresa;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 	
